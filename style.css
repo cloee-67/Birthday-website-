@@ -243,3 +243,7 @@ transition:.3s;
 background:#ff8fab;
 transform:scale(1.05);
 }
+h1, h2 {
+  margin: 10px 0;
+  text-align: center;
+                                }
