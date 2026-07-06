@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Birthday Letter</title>
+
+<style>
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#ffe6f0;
+font-family:Arial;
+}
+
+.envelope{
+width:220px;
+height:140px;
+background:#ff6fa5;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:10px;
+cursor:pointer;
+font-size:55px;
+transition:0.4s;
+}
+
+.envelope:hover{
+transform:scale(1.08);
+}
+
+.letter{
+display:none;
+position:absolute;
+background:white;
+padding:20px;
+border-radius:15px;
+width:280px;
+text-align:center;
+color:black;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+.next-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ffb6c1;
+color:white;
+padding:12px 20px;
+border-radius:25px;
+text-decoration:none;
+font-size:16px;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(255,105,180,.3);
+transition:.3s;
+}
+
+.next-btn:hover{
+background:#ff8fab;
+transform:scale(1.08);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="envelope" onclick="openLetter()">
+💌
+</div>
+<a href="ready.html" class="next-btn">✨ Next</a>
+<div class="letter" id="letter">
+<h2>Happy Birthday ❤️</h2>
+
+<p>
+Happy Birthday, you. 🎂🤍
+
+I hope today is filled with happiness, lots of laughter, good food, and all the love you deserve.
+
+Even though we're miles apart, I still wanted to make something special for you because you mean a lot to me. Distance sucks sometimes, but I'm really glad we became friends.
+
+I hope this year brings you peace, exciting adventures, and countless reasons to smile. Please keep being your amazing self.
+
+And don't forget... I better get lots of cute birthday pictures today. 📸✨ I want to see the outfit, the cake, the decorations everything.
+
+Hopefully one day we won't have to celebrate through a screen, and we'll finally meet in person. Until then, I'll keep cheering you on from here.
+
+Now go enjoy your day, eat lots of cake (save me a slice in theory 😤🍰), make beautiful memories, and remember that someone far away is wishing you the happiest birthday ever.
+
+Happy Birthday once again. Take care of yourself. 🤍🫶
+
+</p>
+<button onclick="closeLetter()">⬅ Close Letter</button>
+</div>
+
+<script>
+function openLetter(){
+document.querySelector(".envelope").style.display="none";
+document.getElementById("letter").style.display="block";
+}
+function closeLetter(){
+    document.getElementById("letter").style.display="none";
+    document.querySelector(".envelope").style.display="flex";
+}
+</script>
+
+</body>
+</html>

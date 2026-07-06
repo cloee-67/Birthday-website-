@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make a Wish 🎂</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+      font-family: Arial;
+      text-align: center;
+    }
+
+    h1 {
+      color: #5a2a3a;
+    }
+
+    .cake {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin-top: 20px;
+    }
+
+.cake-container img {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+    .flame {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 30px;
+      animation: flicker 0.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from { opacity: 1; transform: translateX(-50%) scale(1); }
+      to { opacity: 0.6; transform: translateX(-50%) scale(1.1); }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ffb6c1;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .wish {
+      margin-top: 20px;
+      color: #5a2a3a;
+      font-size: 18px;
+      display: none;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🎂 Make a Wish 💗</h1>
+
+<div class="cake-container">
+  <img id="cake" src="cutecake.jpg" alt="Cake">
+
+  <button onclick="blowCandles()">Blow Candles</button>
+</div>
+<p id="wish" class="wish">
+💖 Yay! The candles are blown out!<br>
+Now close your eyes, make a wish, and may all your dreams come true! ✨🎂
+</p>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+function blowCandles() {
+  document.getElementById("wish").style.display = "block";
+
+  confetti({
+    particleCount: 180,
+    spread: 120,
+    origin: { y: 0.6 }
+  });
+
+  const button = document.querySelector("button");
+  button.innerText = "💌 One Last Surprise";
+
+button.onclick = function() {
+  window.location.href = "final.html";
+};
+}
+</script>
+
+</body>
+</html>

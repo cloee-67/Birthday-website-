@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd6e7, #fff0f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      width: 85%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #ff69b4;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <img src="catcake.jpg" alt="Cute Cat">
+
+  <h1>Happy Birthday! 🎂💖</h1>
+ <p id="message"></p>
+  <p style="margin-top:25px; color:#ff69b4; font-size:14px;">
+Made with love, just for you. 🩷
+</p>
+
+</div>
+
+<script>
+const text = "Happy Birthday!! 🎂🩷 I hope this little website made you smile because I made every part of it thinking of you. You deserve all the happiness, love, laughter, and cake today (and every day hehe 🤭). Don't forget to take lots of cute pictures and send them to me because I definitely want to see them! 📸✨ I really hope one day we get to celebrate your birthday together instead of through a screen. Until then, consider this little website a warm hug from afar. Thank you for being such an amazing friend. I hope this year brings you everything you've been wishing for. Happy Birthday once again! 🎀💖\n\nWith lots of love,\nYour long-distance homiee 🩷";
+
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("message").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 35);
+  }
+}
+
+typeWriter();
+</script>
+<button onclick="window.location.href='bye.html'">
+🎀 Finish
+</button>
+</body>
+</html>
