@@ -1,11 +1,20 @@
 *, *::before, *::after { box-sizing: border-box; }
 body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  text-align: center;
   color: #333;
 }
 .gift-container {
@@ -103,12 +112,7 @@ body::before {
   display: block;
   margin: 0 auto;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+
 .cake {
   position: relative;
   width: 220px;
